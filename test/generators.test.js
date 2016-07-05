@@ -1,7 +1,6 @@
 
 var fs = require('fs');
 var path = require('path');
-var sys = require('sys');
 
 var memfs = {}, writeFileSync, readFileSync, writeSync, closeSync, existsSync,
     mkdirSync, chmodSync, exit;
@@ -28,14 +27,14 @@ describe('Generators API', function() {
 
     beforeEach(function() {
         output = [];
-        puts = sys.puts;
-        sys.puts = function(str) {
+        puts = console.log;
+        console.log = function(str) {
             output.push(str.replace(/\u001b\[\d+m/g, ''));
         };
     });
 
     afterEach(function() {
-        sys.puts = puts;
+        console.log = puts;
     });
 
     it('should generate app', function () {
