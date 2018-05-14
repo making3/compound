@@ -37,7 +37,7 @@
     "coffee-script": "1.7.x",
     "ejs-ext": ">= 0.1.4-2",
     "railway-routes": ">= 0.0.10",
-    "kontroller": ">= 0.0.11",
+    "kontroller": "git+https://git@github.com/making3/kontroller.git",
     "inflection": "~1.2.5"
   },
   "repository": {
